@@ -1,0 +1,65 @@
+<!-- <div class="field">
+    <div class="control">
+        <input class="input" type="text" placeholder="Search for a Character">
+    </div>  
+</div> -->
+<div class="columns margin-top">
+    <!-- <div class="column">
+        <a class="button is-large">Go!</a>
+    </div> -->
+    <div class="column">
+        <a (click)="onLocationSubmit()" class="button is-large">Get all!</a>
+    </div>
+    <div class="column is-four-fifths">
+        <div >
+            <p>Date: {{date |json}}</p>
+            <p>Status Code: {{statuscode |json}}</p>
+            <p>method: {{method |json}}</p>
+            <p>consulted: {{consulted |json}}</p>
+        </div> 
+    </div>
+</div>
+    
+<div *ngFor="let location of locations" class="box">
+        
+    <article  class="media">
+        <div class="media-left">
+        <!-- <figure class="image is-64x64">
+                <img [src]="character.image" />
+        </figure> -->
+        </div>
+        <div class="media-content">
+        <div class="content">
+            <p>
+            <strong>{{ location.name | json }}</strong>
+            <br>
+            Type: {{ location.type| json }}
+            
+            </p>
+        </div>
+        <nav class="level is-mobile">
+            <div class="level-left">
+            <a class="level-item" aria-label="reply">
+                <span class="">
+                    Dimension: {{ location.dimension | json }}
+                </span>
+            </a>
+            <!-- <a class="level-item" aria-label="retweet">
+                <span class="">
+                    Species: {{ character.species | json }}
+                </span>
+            </a> -->
+            <!-- <a class="level-item" aria-label="like">
+                <span class="">
+                    Status: {{ character.status | json }}
+                </span>
+            </a> -->
+            </div>
+        </nav>
+        </div>
+    </article>
+</div>
+
+      
+    
+    
