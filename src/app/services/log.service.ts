@@ -5,7 +5,7 @@ import { Observable } from 'rxjs/Observable';
 import { GLOBAL } from './global';
 
 @Injectable()
-export class CharacterService{
+export class LogService{
 
     public url: string;
 
@@ -17,8 +17,9 @@ export class CharacterService{
         
         let headers = new Headers({'Content-Type': 'application/json'})
         
-        return this._http.get(this.url+'/character', {headers: headers}).map(res => res.json());
+        return this._http.get(this.url+'/log', {headers: headers}).map(res => res.json());
         
     }
 
 }
+
